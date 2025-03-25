@@ -1,0 +1,16 @@
+from tkinter import *
+window = Tk()
+
+window.title("Welcome to Grafin")
+window.geometry('400x300')
+lable = Label(text = "Hello", fg = "black",bg="white")
+button = Button(text = "Test",fg = "black",bg="white",relief = RAISED)
+entry = Entry(fg="white",bg= "black")
+lable.pack()
+button.pack()
+entry.pack()
+frame = Frame(master = window, borderwidth=9)
+frame.pack()
+textbox = Text(fg="white",bg="black")
+textbox.pack()
+window.mainloop()
