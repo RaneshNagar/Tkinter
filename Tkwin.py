@@ -1,0 +1,25 @@
+from tkinter import *
+from PIL import Image,ImageTk
+window = Tk()
+
+window.title("Welcome to Grafin")
+window.geometry('400x300')
+upload = Image.open("Real_Madrid.jpg")
+image = ImageTk.PhotoImage(upload)
+def new():
+  top = Toplevel()
+  top.title("Demo of toplevel.")
+  top.geometry('200x100')
+  l2 = Label(top,text = "This is a new window")
+  l2.pack()
+l = Label(text = "Window", fg = "black",bg="white")
+b = Button(text = "Click me to opean new window",fg = "black",bg="white",relief = RAISED,command=new)
+e = Entry(fg="white",bg= "black")
+l.pack()
+b.pack()
+e.pack()
+frame = Frame(master = window, borderwidth=9)
+frame.pack()
+textbox = Text(fg="white",bg="black")
+textbox.pack()
+window.mainloop()
